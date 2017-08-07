@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>MagicalAnimation</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type"> 
+        <link rel="stylesheet" type="text/css" href="MagicalAnimation.css"/>
+        <script src="jquery.min.js"></script>
+    </head>
+    
+    <body>
+        <div class="container">
+            <h1 id="animationSandbox" class="Water rotateleftreverse" style="animation-duration: 1.5s;">WaterCss</h1>
+            <form class="form Water rotaterightreverse" style="animation-duration: 1.5s;">
+                <select class="select" id="statusselect" >
+                    <optgroup label="Animation"></optgroup>
+                    <option>rubber_band</option>
+                    <option>shake</option>
+                    <option>bounce</option>
+                    <optgroup>byebye</optgroup>
+                    <option>roar</option>
+                    <option>uptostand</option>
+                    <option>standtodown</option>
+                    <option>righttostand</option>
+                    <option>lefttostand</option>
+                    <option>bottomtostand</option>
+                    <option>move-right-arround</option>
+                    <option>move-left-arround</option>
+                    <option>hanging</option>
+                    <option>jelly</option>
+                    <option>throwup</option>
+                    <option>throwdown</option>
+                    <option>throwright</option>
+                    <option>throwleft</option>
+                    <option>fadein</option>
+                    <option>fadeup</option>
+                    <option>fadedown</option>
+                    <option>fadedownIn</option>
+                    <option>faderightfrom</option>
+                    <option>fadeleftto</option>
+                    <option>clockin</option>
+                    <option>clockwise</option>
+                    <option>anticlockwise</option>
+                    <option>fliparound</option>
+                    <option>flipup</option>
+                    <option>flipdown</option>
+                    <option>filpupcirculer</option>
+                    <option>rotateleft</option>
+                    <option>rotateleftreverse</option>
+                    <option>rotateright</option>
+                    <option>rotaterightreverse</option>
+                    <option>rotateup</option>
+                    <option>rotateupreverse</option>
+                    <option>rotatedown</option>
+                    <option>rotatedownreverse</option>
+                    <option>zoomIn</option>
+                    <option>zoomIndown</option>
+                    <option>zoomInup</option>
+                    <option>zoomInright</option>
+                    <option>zoomInleft</option>
+                    <option>zoomout</option>
+                    <option>zoomoutdown</option>
+                    <option>zoomoutup</option>
+                    <option>zoomoutleft</option>
+                    <option>zoomoutright</option>
+                </select>
+                <select class="select" id="time">
+                    <optgroup label="Time"></optgroup>
+                    <option>1s</option>
+                    <option>2s</option>
+                    <option>3s</option>
+                    <option>4s</option>
+                    <option>5s</option>
+                    <option>6s</option>
+                    
+                </select>
+                <input type="button" id="btn" value="Animation"/>
+                <br/>
+            <hr/>
+                <div>
+                <h3>Download from <a href="https://github.com/skaran225/Animation" target="blank_">Github</a></h3>
+                </div>
+                <div>
+                <h3>Developed by <a href="https://github.com/skaran225" target="blank_">Karan Singh</a></h3>
+                </div>
+                <div><h4 class="use">how to use:</h4></div>
+                <div class="note"><h4 class="textType">&lt;div class="Water css"&gt;&lt;/div&gt;</h4></div>
+            </form>
+            
+            
+        </div>
+        
+        <script type="text/javascript">
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                $("h1").removeClass();
+               $("h1").addClass("Water "+$('#statusselect').find(":selected").text());
+                
+                $(".Water").css("animation-duration"," "+$('#time').find(":selected").text());
+            });
+           
+        });
+    </script>
+    </body>
+</html>
